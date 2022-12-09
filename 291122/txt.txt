@@ -1,0 +1,108 @@
+and ou &&
+
+objetivo = ir ao cinema
+
+condiçoes:
+
+- tenho que ter dinehiro
+- tem que ter ingresso disponivel
+
+1º cenario:
+
+- eu tenho dinheiro = VERDADEIRO
+-nao tem ingresso disponivel = FALSE
+
+resultado = não posso ir ao cinema = FALSE
+
+2º cenario:
+
+- eu nao tenho dinehiro = FALSE
+- tem ingresso disponivel = VERDADEIRO
+
+resultado = não posso ir ao cinema = FALSE
+
+3º cenario:
+- eu nao tenho dinehiro = FALSE
+-nao tem ingresso disponivel = FALSE
+
+resultado = não posso ir ao cinema = FALSE
+
+4º cenario:
+- eu tenho dinheiro = VERDADEIRO
+- tem ingresso disponivel = VERDADEIRO
+
+resultado = posso ir ao cinema = VERDAEIRO
+
+
+----------------------------------------------------------------
+OR ou ||
+para passar na frente da fila tem que ser
+gestante, deficiente ou idoso
+
+pessoa = 18 anos e nao tem problemas
+
+1º cenario
+
+- a pessoa é gestante? NAO
+- a pessoa é deficiente? NAO
+- a pessoa é idosa? NAO
+
+resultado  = A pessoa nao pode passar na frente da fila
+
+2º cenario
+
+pessoa = 18 anos e é gestante
+
+- a pessoa é gestante? SIM
+- a pessoa é deficiente? NAO
+- a pessoa é idosa? NAO
+
+RESULTADO = pessoa pode passar na frente da fila
+
+3º cenario
+
+pessoa = 62 anos e é cadeirante
+
+- a pessoa é gestante? NAO
+- a pessoa é deficiente? SIM
+- a pessoa é idosa? SIM
+
+----------------------------
+
+let totalCompra = prompt(Digite o total da compra: )
+
+if(totalCompra !== null) {
+    totalCompra = Number(totalCompra.replace('.', ' ').replace(',', '.'))
+}
+
+if(!totalCompra) {
+    document.write(Valor inválido)
+}else {
+    let quantiParc = prompt(Digite a quantidade de parcelas: )
+
+    if (quantiParc !== null) {
+        quantiParc = Number(quantiParc.replace('.', ' ').replace(',', '.'))
+    }
+
+    if (!quantiParc) {
+        document.write(Valor inválido)
+    }else {
+        let valorParc = totalCompra / quantiParc
+
+        document.write(O Valor total da compra foi ${totalCompra.toFixed(2)})
+        document.write(Forma de pagamento foi em ${quantiParc} vezes, Cada parcela será no valor de R$${valorParc.toFixed(2)})
+    }
+}
+
+------------------------------------------------
+Criar um algoritmo para calcular a média de 3 notas e no final fazer as seguintes validações:
+
+- Se a média ficar entre 9 e 10 deve ser mostrado no html a mensagem: Aprovado com nota excelente
+
+- Se a média ficar entre 7 e 9 (não incluso) deve ser mostrado no html a mensagem: Aprovado com uma nota boa
+
+- Se a média ficar abaixo de 7 deve ser solicitado uma outra nota que será a nota de recuperação.
+
+- Se a nota de recuperação for maior  ou igual a 6 deve ser mostrado a mensagem no html: Aprovado na recuperação
+
+- Se a nota ficar abaixo de 6 deve ser mostrado a mensagem no html: Reprovado, estude e pratique mais.
